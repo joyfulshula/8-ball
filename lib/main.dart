@@ -1,5 +1,7 @@
-import 'dart:ui';
+// ignore_for_file: deprecated_member_use
 
+import 'dart:ui';
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -34,17 +36,21 @@ class Ball extends StatefulWidget {
 }
 
 class _BallState extends State<Ball> {
+  int ballNumber = 0;
+
   @override
   Widget build(BuildContext context) {
+    int ballNumber = 1;
     return Center(
       child: Row(
         children: [
           Expanded(
             child: FlatButton(
               onPressed: () {
+                Random().nextInt(4);
                 print('I got clicked');
               },
-              child: Image.asset('images/ball1.png'),
+              child: Image.asset('images/ball$ballNumber.png'),
             ),
           ),
         ],
