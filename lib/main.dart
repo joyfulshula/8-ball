@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -13,7 +15,10 @@ class BallPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ask Me AnyThing!'),
+        title: Text(
+          'Ask Me AnyThing!',
+          style: TextStyle(color: Colors.black),
+        ),
         backgroundColor: Colors.yellowAccent,
       ),
       body: Container(),
