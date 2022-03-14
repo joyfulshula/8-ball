@@ -36,21 +36,20 @@ class Ball extends StatefulWidget {
 }
 
 class _BallState extends State<Ball> {
-  int ballNumber = 0;
+  int ballNumber = 1;
+  String ballName = 'ball';
 
   @override
   Widget build(BuildContext context) {
-    int ballNumber = 1;
     return Center(
       child: Row(
         children: [
           Expanded(
             child: FlatButton(
               onPressed: () {
-                Random().nextInt(4);
-                print('I got clicked');
+                print(Random().nextInt(5) + 1);
               },
-              child: Image.asset('images/ball$ballNumber.png'),
+              child: Image.asset('images/$ballName$ballNumber.png'),
             ),
           ),
         ],
